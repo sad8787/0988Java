@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Loguin");
+        String loguin= scanner.next();
+        System.out.println("Pass");
+        String pass=scanner.next();
+        if (loguin.equals("admin") && pass.equals("123456"))
+        {
+            System.out.println("ok");
+        }
+        else if (loguin.equals("sadiel") && pass.equals("123"))
+        {
+            System.out.println("ok sadiel");
+        }
+        else{
+            System.out.println("no ");
+        }
+       /* System.out.println("Hello "+name);
+        int num1=8;
+        int num2=2;
+        System.out.println(num1+num2);
+        System.out.println(num1-num2);
+        System.out.println(num1*num2);
+        System.out.println(num1/num2);
+        System.out.println(num1%num2);
+        System.out.println(num1>num2);
+        System.out.println(num1<num2);
+        System.out.println((num1+10)+num2);
+        Scanner scaner=new Scanner(System.in);
+        int a=scaner.nextInt();
+        int b=scaner.nextInt();
+        if (a<b){
+            System.out.println(a+b);
+        }
+        else{
+            System.out.println(a-b);
+        }*/
