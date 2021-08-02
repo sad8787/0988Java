@@ -18,3 +18,4 @@ public class Main {
         if(a>b){a=b;}
         return a;
     }
+}
