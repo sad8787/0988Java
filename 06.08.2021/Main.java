@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         String functionalIp="";
         try {
-            FileInputStream fin = new FileInputStream("C://text//goodip.txt");
+            FileInputStream fin = new FileInputStream("C://text//ip.txt");
             int i;
             String resultIP="";
             while ((i=fin.read()) != -1){//code ascii return -1 como fin de texto
@@ -38,7 +38,7 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Writefichero(functionalIp,"C://text//goodip1.txt");
+        Writefichero(functionalIp,"C://text//goodip.txt");
 
     }
 
