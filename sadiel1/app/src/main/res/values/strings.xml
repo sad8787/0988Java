@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">sadiel1</string>
-    <string name="question1">Гавана - столица Кубы?</string>
-    <string name="question2">Правда что в Гаване Куба ВАЗ-2101 «Жигули» стоит 1500 до 40000 Долларов?</string>
-    <string name="question3"> Че гевара кубинец?</string>
-    <string name="Yes"> Yes</string>
-    <string name="No"> No </string>
-
-</resources>
