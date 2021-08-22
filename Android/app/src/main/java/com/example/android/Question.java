@@ -4,7 +4,7 @@ public class Question {
     private int questionsText;
     private int explanations;
     private boolean questionsTrue;
-    private boolean answer;
+    private boolean answer;//respuesta del usuario
     public Question(int questionsText, boolean questionsTrue ,int explanations){
         this.questionsText=questionsText;
         this.questionsTrue=questionsTrue;
@@ -37,5 +37,8 @@ public class Question {
 
     public int getExplanations() {
         return explanations;
+    }
+    public boolean Thatsright(){
+        return (questionsTrue ==answer);
     }
 }

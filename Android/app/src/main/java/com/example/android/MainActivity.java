@@ -4,11 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     Button buttonNo;
     Button buttonSolution;
     TextView textViewQuestions;
+
+
     Question[] questions=new Question[]{
             new Question(R.string.question1,true,R.string.explanations1),
             new Question(R.string.question2,true,R.string.explanations2),
@@ -58,14 +65,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Верно",Toast.LENGTH_LONG).show();
                 else
                     Toast.makeText(MainActivity.this,"Не правильным",Toast.LENGTH_LONG).show();
-
+                questions[questionIndex].setAnswer(true);
                 //questionIndex=(questionIndex+1)%questions.length;// es igual if en anterior
                 questionIndex++;
                 if(questionIndex>=questions.length)
-                {
-                    //llamar ventana
-                }
-                textViewQuestions.setText(questions[questionIndex].getQuestionsText());
+                    report();
+                else
+                    textViewQuestions.setText(questions[questionIndex].getQuestionsText());
+
             }
         });
         buttonNo=findViewById(R.id.ButtonNo);
@@ -76,16 +83,13 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Верно",Toast.LENGTH_LONG).show();
                 else
                     Toast.makeText(MainActivity.this,"Не правильным",Toast.LENGTH_LONG).show();
-               /* if (questionIndex<questions.length-1)
-                    questionIndex++;
-                else
-                    questionIndex=0;*/
+                questions[questionIndex].setAnswer(false);
+                //questionIndex=(questionIndex+1)%questions.length;// es igual if en anterior
                 questionIndex++;
                 if(questionIndex>=questions.length)
-                {
-                    //llamar ventana
-                }
-                textViewQuestions.setText(questions[questionIndex].getQuestionsText());
+                    report();
+                else
+                    textViewQuestions.setText(questions[questionIndex].getQuestionsText());
 
             }
         });
@@ -99,14 +103,26 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("questionIndex", questionIndex);
     }
 
-    protected String report(){
-        String report= "Report /n";
-        for (int i=0;i<questions.length;i++){
-            report += "Question "+i+": ";
-            if (questions[i].isAnswer())
+    protected void report(){
+        String report="";
+        int val=0;
+        for (int i=0;i<questions.length;i++) {
+            if(questions[i].Thatsright()){
+                val++;
+                report+="Question number "+(i+1)+" You have answered correctly \n";
+            }
+            else
+                report+="Question number "+(i+1)+" You have answered incorrect\n";
         }
-        return "";
+
+        Intent intent = new Intent(MainActivity.this, Report.class);
+        intent.putExtra("val", val);
+        intent.putExtra("length", questions.length);
+        intent.putExtra("report",report);
+        startActivity(intent);
+
     }
+
 
 
 

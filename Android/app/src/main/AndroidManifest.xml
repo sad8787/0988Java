@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android">
         <activity
+            android:name=".Report"
+            android:exported="true" />
+        <activity
             android:name=".SolutionActivity"
             android:exported="true" />
         <activity
