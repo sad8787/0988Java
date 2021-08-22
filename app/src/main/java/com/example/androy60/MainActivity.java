@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        buttonYes=findViewById(R.id.y)
+        buttonYes=findViewById(R.id.Yes);
         textViewQuestions.setText(questions[questionIndex].getQuestionsText());
     }
 }

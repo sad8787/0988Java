@@ -1,8 +1,32 @@
 <resources>
     <string name="app_name">Android</string>
     <string name="question1">Гавана - столица Кубы?</string>
+    <string name="explanations1">Основан 16 ноября 1519 г.
+        Гавана - столица Республики Куба, ее крупнейший город, главный порт,
+        экономический и культурный центр и главный туристический полюс.
+        Это самый густонаселенный город страны с населением 2 106 146 человек по данным на 2012 год,
+        5 и третий по численности населения в Карибском регионе.</string>
     <string name="question2">Правда что в Гаване Куба ВАЗ-2101 «Жигули» стоит 15000 до 40000 Долларов?</string>
+    <string name="explanations2">Из-за законов, запрещающих ввоз автомобилей.
+        На Кубе ходят очень старые машины. из времен до победы революции или импортированных
+        из старого коммунистического блока (CCCP). Это пробоча дороговизны запчастей,
+        а значит и самого автомобиля.</string>
+
     <string name="question3"> Че гевара кубинец?</string>
+    <string name="explanations3"> Эрнесто Гевара
+        (Росарио, Аргентина, 14 июня 1928 г. - Ла Игера, Боливия, 9 октября 1967 г.),
+        известный как «Че Гевара» или просто «Че», был врачом, политиком, партизаном, писателем,
+        кубинским национализированным аргентинским журналистом-коммунистом. и революционный.</string>
     <string name="Yes"> Yes</string>
     <string name="No"> No </string>
+    <string name="solution"> Решение </string>
+    <string name="title_activity_report">Report</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

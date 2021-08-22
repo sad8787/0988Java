@@ -2,10 +2,13 @@ package com.example.android;
 
 public class Question {
     private int questionsText;
+    private int explanations;
     private boolean questionsTrue;
-    public Question(int questionsText, boolean questionsTrue){
+    private boolean answer;
+    public Question(int questionsText, boolean questionsTrue ,int explanations){
         this.questionsText=questionsText;
         this.questionsTrue=questionsTrue;
+        this.explanations=explanations;
     }
 
     public void setQuestionsText(int questionsText) {
@@ -22,5 +25,17 @@ public class Question {
 
     public void setQuestionsTrue(boolean questionsTrue) {
         this.questionsTrue = questionsTrue;
+    }
+
+    public boolean isAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(boolean answer) {
+        this.answer = answer;
+    }
+
+    public int getExplanations() {
+        return explanations;
     }
 }
