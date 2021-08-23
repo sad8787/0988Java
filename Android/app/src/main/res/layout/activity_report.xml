@@ -7,14 +7,25 @@
     tools:context=".Report">
 
     <TextView
-        android:id="@+id/textViewrReport"
-        android:layout_width="344dp"
-        android:layout_height="506dp"
+        android:id="@+id/textViewReport"
+        android:layout_width="335dp"
+        android:layout_height="367dp"
+
+
+        android:layout_marginTop="56dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/porcent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/porcent"
+        android:layout_width="335dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="52dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
