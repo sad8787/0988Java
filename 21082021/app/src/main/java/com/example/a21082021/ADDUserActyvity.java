@@ -14,6 +14,7 @@ public class ADDUserActyvity extends AppCompatActivity {
     TextView lastNameTextView;
     TextView fonNumberTextView;
     Button buttonADD;
+    Button buttonback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,8 @@ public class ADDUserActyvity extends AppCompatActivity {
         lastNameTextView=findViewById(R.id.textlasName);
         fonNumberTextView=findViewById(R.id.textFonNumber);
         buttonADD=findViewById(R.id.ADDbutton);
+        buttonback=findViewById(R.id.ButtonBack);
+
         buttonADD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +36,12 @@ public class ADDUserActyvity extends AppCompatActivity {
                 Users users=new Users(ADDUserActyvity.this);
                 users.addUser(user);
                 //regret
+                onBackPressed();
+            }
+        });
+        buttonback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 onBackPressed();
             }
         });

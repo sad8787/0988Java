@@ -2,6 +2,7 @@ package com.example.a21082021;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +35,9 @@ public class UserInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                Intent intent=new Intent(UserInfoActivity.this,UserDeleteActivity.class);
+                intent.putExtra("user",user);
+                startActivity(intent);
                 //delete
                 onBackPressed();
             }
@@ -42,7 +45,9 @@ public class UserInfoActivity extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(UserInfoActivity.this,UbdateUserActivity.class);
+                intent.putExtra("user",user);
+                startActivity(intent);
                 //ubdate
                 onBackPressed();
             }

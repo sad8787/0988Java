@@ -66,10 +66,12 @@ public class Users {
 
         return values;
     }
-    private void ubdateUser(User user){
-
+    public void ubdateUser(User user){
+        deleteUser(user);
+        addUser(user);
     }
-    private void deleteUser(User user){
-
+    public void deleteUser(User user){
+        ContentValues values=getContentValues( user);
+        database.delete(UserDdSchema.UserTable.NAME,UserDdSchema.Cols.UUID+"=?",new String[]{user.getUuid().toString()});
     }
 }
