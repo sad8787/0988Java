@@ -8,6 +8,10 @@ public class User implements Serializable {
     private String lastname;
     private String fonNumber;
     private UUID uuid;
+
+    public User(UUID uuid ){
+        this.uuid=uuid;
+    }
     public User(){
         uuid=UUID.randomUUID();
     }

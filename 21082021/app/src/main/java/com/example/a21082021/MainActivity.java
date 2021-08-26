@@ -17,35 +17,45 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    Button buttonOk;
+    Button buttonADD;
     UserAdapter userAdapter;
     ArrayList<User> userList = new ArrayList<>();
-    String[] names={"Sadiel","Rafael","Juan","Michel","Maria","Elena","Roza",
-                                "Firulay","Fulano","Mengano","Putin"};
-    String[] lastNames={"Sadiel","Rafael","Juan","Michel","Maria","Elena","Roza",
-            "Firulay","Fulano","Mengano","Putin"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        for (int i = 1; i < 30; i++) {
-            int a=i%11;
-            String x=names[a];
-            User user=new User();
-            user.setName(names[a]);
-            user.setLastname(lastNames[a]);
-            user.setFonNumber("+796388555456");
-            userList.add(user);
-        }
+       ////users
+        /*Users users=new Users(MainActivity.this);
+        userList=users.getUserslist();*/
 
         recyclerView = findViewById(R.id.recyclerView);
-        buttonOk=findViewById(R.id.OK);
+        buttonADD=findViewById(R.id.ADD);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        buttonADD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {//ADD USER
+                Intent intent = new Intent(MainActivity.this, ADDUserActyvity.class);
+                //intent.putExtra("questionIndex", questionIndex);
+                startActivity(intent);
+            }
+        });
+
+        //userAdapter = new UserAdapter(userList);
+       // recyclerView.setAdapter(userAdapter);
+    }
+
+    private void recyclerViewInit(){
+        Users users=new Users(MainActivity.this);
+        userList=users.getUserslist();
         userAdapter = new UserAdapter(userList);
         recyclerView.setAdapter(userAdapter);
     }
-
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        recyclerViewInit();
+    }
     private class UserHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView itemTextView;
         User user;

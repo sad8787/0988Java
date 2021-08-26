@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.21082021">
         <activity
+            android:name=".UserDeleteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ADDUserActyvity"
+            android:exported="true" />
+        <activity
             android:name=".UserInfoActivity"
             android:exported="true" />
         <activity
