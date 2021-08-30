@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">21082021</string>
+    <string name="Ok">Ok</string>
+    <string name="ADD">ADD</string>
+    <string name="back">назад</string>
+    <string name="update">Обновить</string>
+    <string name="Delete">Удалить</string>
+    <string name="Delete1">Вы уверены, что хотите удалить эти данные?</string>
+</resources>

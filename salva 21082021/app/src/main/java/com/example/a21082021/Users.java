@@ -8,10 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.a21082021.Database.UserBaseHelper;
 import com.example.a21082021.Database.UserDdSchema;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class Users {
@@ -24,7 +20,7 @@ public class Users {
     }
 
     public ArrayList<User> getUserslist() {
-
+      
         this.userList=new ArrayList<>();
         UserCursorWrapper cursorWrapper=queryUsers();
         try {
@@ -47,31 +43,6 @@ public class Users {
 
     }
     public void addUser(User user){
-        /*String host = "http://0988.vozhzhaev.ru/handlerAddUser.php? name="+ user.getName()+
-                "&lastname="+ user.getLastname()+
-                "&phone="+user.getFonNomer()+
-                "&uuid="+user.getUuid().toString();
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    URL url = new URL(host);
-                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                    InputStream is = urlConnection.getInputStream();
-                    InputStreamReader reader = new InputStreamReader(is);
-                    int i;
-                    StringBuilder result = new StringBuilder();
-                    while ((i=reader.read()) != -1){
-                        result.append((char)i);
-                    }
-                    System.out.println(result);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        Thread t = new Thread(runnable);
-        t.start();*/
         ContentValues values=getContentValues( user);
         database.insert(UserDdSchema.UserTable.NAME,null,values);
     }
