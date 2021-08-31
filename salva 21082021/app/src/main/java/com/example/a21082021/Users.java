@@ -20,7 +20,7 @@ public class Users {
     }
 
     public ArrayList<User> getUserslist() {
-      
+
         this.userList=new ArrayList<>();
         UserCursorWrapper cursorWrapper=queryUsers();
         try {

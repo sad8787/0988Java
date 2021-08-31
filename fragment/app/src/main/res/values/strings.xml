@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">secondApp</string>
+    <string name="add_user_btn">Добавить пользователя</string>
+    <string name="back">назад</string>
+
+</resources>
